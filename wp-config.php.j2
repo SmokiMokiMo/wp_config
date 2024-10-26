@@ -1,11 +1,11 @@
 <?php
-define('DB_NAME', '{{ db_name }}');
-define('DB_USER', '{{ db_user }}');
-define('DB_PASSWORD', '{{ db_password }}');
-define('DB_HOST', '{{ db_host }}');
-define('WP_REDIS_HOST', '{{ redis_host }}');
-define('WP_REDIS_PORT', '{{ redis_port }}');
+// Load environment variables from .bashrc
+define('DB_NAME', getenv('DB_NAME'));
+define('DB_USER', getenv('DB_USER'));
+define('DB_PASSWORD', getenv('DB_PASSWORD'));
+define('DB_HOST', getenv('DB_HOST'));
+define('WP_REDIS_HOST', getenv('REDIS_HOST'));
+define('WP_REDIS_PORT', getenv('REDIS_PORT'));
 
 define('WP_CACHE', true); 
 define('WP_REDIS_DISABLED', false);
-?>
